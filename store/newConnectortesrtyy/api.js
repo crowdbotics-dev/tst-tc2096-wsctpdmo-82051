@@ -11,7 +11,13 @@ const newConnectortesrtyy = axios.create({
   },
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
+function newconnectortesrtyy_get__read(payload) {
+  return newConnectortesrtyy.get(`/`)
+}
 function newconnectortesrtyy_get_testujfn_test_testing_read(payload) {
   return newConnectortesrtyy.get(`/testujfn/${payload.test}/${payload.testing}`)
 }
-export const apiService = { newconnectortesrtyy_get_testujfn_test_testing_read }
+export const apiService = {
+  newconnectortesrtyy_get__read,
+  newconnectortesrtyy_get_testujfn_test_testing_read
+}
