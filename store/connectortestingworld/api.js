@@ -11,7 +11,11 @@ const connectortestingworld = axios.create({
   },
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
-function connectortestingworld_get_testing_test_path_read(payload) {
-  return connectortestingworld.get(`/testing/${payload.test}/${payload.path}`)
+function connectortestingworld_get_testing_test_path_cool_read(payload) {
+  return connectortestingworld.get(
+    `/testing/${payload.test}/${payload.path}/${payload.cool}`
+  )
 }
-export const apiService = { connectortestingworld_get_testing_test_path_read }
+export const apiService = {
+  connectortestingworld_get_testing_test_path_cool_read
+}
